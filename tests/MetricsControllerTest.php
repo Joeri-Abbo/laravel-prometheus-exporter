@@ -9,12 +9,11 @@ use Illuminate\Routing\ResponseFactory;
 use JoeriAbbo\LaravelPrometheusExporter\MetricsController;
 use JoeriAbbo\LaravelPrometheusExporter\PrometheusExporter;
 use Mockery;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Prometheus\RenderTextFormat;
 
-/**
- * @covers \JoeriAbbo\LaravelPrometheusExporter\MetricsController<extended>
- */
+#[CoversClass(\JoeriAbbo\LaravelPrometheusExporter\MetricsController::class)]
 class MetricsControllerTest extends TestCase
 {
     /**

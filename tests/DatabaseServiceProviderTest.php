@@ -10,11 +10,10 @@ use JoeriAbbo\LaravelPrometheusExporter\PrometheusExporter;
 use JoeriAbbo\LaravelPrometheusExporter\PrometheusServiceProvider;
 use JoeriAbbo\LaravelPrometheusExporter\Tests\Fixture\MetricSamplesSpec;
 use Orchestra\Testbench\TestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
 use Prometheus\Histogram;
 
-/**
- * @covers \JoeriAbbo\LaravelPrometheusExporter\DatabaseServiceProvider<extended>
- */
+#[CoversClass(\JoeriAbbo\LaravelPrometheusExporter\DatabaseServiceProvider::class)]
 class DatabaseServiceProviderTest extends TestCase
 {
     private $createdTable = false;

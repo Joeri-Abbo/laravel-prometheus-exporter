@@ -8,11 +8,10 @@ use JoeriAbbo\LaravelPrometheusExporter\PrometheusExporter;
 use JoeriAbbo\LaravelPrometheusExporter\PrometheusServiceProvider;
 use JoeriAbbo\LaravelPrometheusExporter\StorageAdapterFactory;
 use Orchestra\Testbench\TestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
 use Prometheus\Storage\Adapter;
 
-/**
- * @covers \JoeriAbbo\LaravelPrometheusExporter\PrometheusServiceProvider<extended>
- */
+#[CoversClass(\JoeriAbbo\LaravelPrometheusExporter\PrometheusServiceProvider::class)]
 class PrometheusServiceProviderTest extends TestCase
 {
     public function testServiceProvider(): void

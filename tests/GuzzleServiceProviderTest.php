@@ -13,11 +13,10 @@ use JoeriAbbo\LaravelPrometheusExporter\GuzzleMiddleware;
 use JoeriAbbo\LaravelPrometheusExporter\GuzzleServiceProvider;
 use JoeriAbbo\LaravelPrometheusExporter\PrometheusServiceProvider;
 use Orchestra\Testbench\TestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
 use Prometheus\Histogram;
 
-/**
- * @covers \JoeriAbbo\LaravelPrometheusExporter\GuzzleServiceProvider<extended>
- */
+#[CoversClass(\JoeriAbbo\LaravelPrometheusExporter\GuzzleServiceProvider::class)]
 class GuzzleServiceProviderTest extends TestCase
 {
     public function testServiceProvidersShouldHaveCorrectClasses(): void
