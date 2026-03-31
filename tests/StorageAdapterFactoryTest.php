@@ -6,14 +6,13 @@ namespace JoeriAbbo\LaravelPrometheusExporter\Tests;
 
 use InvalidArgumentException;
 use JoeriAbbo\LaravelPrometheusExporter\StorageAdapterFactory;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Prometheus\Exception\StorageException;
 use Prometheus\Storage\APC;
 use Prometheus\Storage\InMemory;
 
-/**
- * @covers \JoeriAbbo\LaravelPrometheusExporter\StorageAdapterFactory<extended>
- */
+#[CoversClass(\JoeriAbbo\LaravelPrometheusExporter\StorageAdapterFactory::class)]
 class StorageAdapterFactoryTest extends TestCase
 {
     /**
